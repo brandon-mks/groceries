@@ -151,5 +151,14 @@ function getTotalCost(items) {
  * @returns {Item} the item with the highest price
  */
 function getMostExpensiveItem(items) {
-  // TODO
+  let bigBucks = {
+    price: 0,
+  };
+  for (let i of items) {
+    if (i.price > bigBucks.price) {
+      bigBucks = i;
+    }
+  }
+  return bigBucks;
 }
+//console.log(getMostExpensiveItem(INVENTORY));
