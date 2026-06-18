@@ -38,15 +38,25 @@ function getIds(items) {
   return result;
 }
 
-console.log(getIds(INVENTORY));
+//console.log(getIds(INVENTORY));
 
 /**
  * @param {Item[]} items
  * @returns {string[]} categories of given items
  */
 function getCategories(items) {
-  // TODO
+  let result = [];
+  /*for (let i = 0; i < items.length; i++) {
+    result.push(items[i].category);
+  }*/
+  for (let i of items) {
+    result.push(i.category);
+  }
+
+  return result;
 }
+
+//console.log(getCategories(INVENTORY));
 
 /**
  * Vendors often use SKUs (Stock Keeping Units) to manage their inventory.
@@ -58,8 +68,17 @@ function getCategories(items) {
  * @returns {string[]} SKUs of given items
  */
 function getSkus(items) {
-  // TODO
+  let skus = [];
+  /*for (let i = 0; i < items.length; i++) {
+    skus.push(`${items[i].id}#${items[i].name}#${items[i].name.length}`);
+  }*/
+  for (let i of items) {
+    skus.push(`${i.id}#${i.name}#${i.name.length}`);
+  }
+  return skus;
 }
+
+//console.log(getSkus(INVENTORY));
 
 /**
  * @param {Item[]} items
