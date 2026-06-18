@@ -31,9 +31,10 @@ function getIds(items) {
   /*for (let i = 0; i < items.length; i++) {
     result.push(items[i].id);
   }*/
-  for (let i of items) {
+  /*for (let i of items) {
     result.push(i.id);
-  }
+  }*/
+  items.forEach((item) => result.push(item.id));
 
   return result;
 }
@@ -104,7 +105,7 @@ function getItemsByCategory(items, category) {
   return items.filter(result);
 }
 
-//console.log(getItemsByCategory(INVENTORY, "vegetable"));
+//console.log(getItemsByCategory(INVENTORY, "dairy"));
 
 /**
  * An item is considered "cheap" if its price is $2.50 or less.
