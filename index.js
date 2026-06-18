@@ -115,15 +115,23 @@ function getCheapItems(items) {
   let result = (item) => item.price <= 2.5;
   return items.filter(result);
 }
+//console.log(getCheapItems(INVENTORY));
 
-console.log(getCheapItems(INVENTORY));
 /**
  * @param {Item[]} items
  * @returns {number} the total quantity of all items given
  */
 function countItems(items) {
-  // TODO
+  let result = 0;
+  for (let i of items) {
+    result += i.quantity;
+  }
+  return result;
+  /*let result = (totalQuant, itemQuant) => totalQuant + itemQuant.quantity;
+  return items.reduce(result, 0);*/
 }
+
+console.log(countItems(INVENTORY));
 
 /**
  * @param {Item[]} items
