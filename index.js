@@ -131,15 +131,20 @@ function countItems(items) {
   return items.reduce(result, 0);*/
 }
 
-console.log(countItems(INVENTORY));
+//console.log(countItems(INVENTORY));
 
 /**
  * @param {Item[]} items
  * @returns {number} the cost of purchasing every single item
  */
 function getTotalCost(items) {
-  // TODO
+  let cost = 0;
+  for (let i of items) {
+    cost += i.quantity * i.price;
+  }
+  return cost;
 }
+//console.log(getTotalCost(INVENTORY));
 
 /**
  * @param {Item[]} items
