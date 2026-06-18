@@ -50,9 +50,10 @@ function getCategories(items) {
   /*for (let i = 0; i < items.length; i++) {
     result.push(items[i].category);
   }*/
-  for (let i of items) {
+  /*for (let i of items) {
     result.push(i.category);
-  }
+  }*/
+  items.forEach((item) => result.push(item.category));
 
   return result;
 }
