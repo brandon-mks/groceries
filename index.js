@@ -27,8 +27,18 @@ const INVENTORY = [
  * @returns {number[]} ids of given items
  */
 function getIds(items) {
-  // TODO
+  let result = [];
+  /*for (let i = 0; i < items.length; i++) {
+    result.push(items[i].id);
+  }*/
+  for (let i of items) {
+    result.push(i.id);
+  }
+
+  return result;
 }
+
+console.log(getIds(INVENTORY));
 
 /**
  * @param {Item[]} items
