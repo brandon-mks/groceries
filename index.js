@@ -92,7 +92,7 @@ function getFruits(items) {
   return items.filter(result);
 }
 
-console.log(getFruits(INVENTORY));
+//console.log(getFruits(INVENTORY));
 
 /**
  * @param {Item[]} items
@@ -100,8 +100,11 @@ console.log(getFruits(INVENTORY));
  * @returns {Item[]} all items in the given category
  */
 function getItemsByCategory(items, category) {
-  // TODO
+  let result = (item) => item.category == category;
+  return items.filter(result);
 }
+
+//console.log(getItemsByCategory(INVENTORY, "vegetable"));
 
 /**
  * An item is considered "cheap" if its price is $2.50 or less.
@@ -109,9 +112,11 @@ function getItemsByCategory(items, category) {
  * @returns {Item[]} all cheap items
  */
 function getCheapItems(items) {
-  // TODO
+  let result = (item) => item.price <= 2.5;
+  return items.filter(result);
 }
 
+console.log(getCheapItems(INVENTORY));
 /**
  * @param {Item[]} items
  * @returns {number} the total quantity of all items given
